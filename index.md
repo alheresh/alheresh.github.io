@@ -3,18 +3,6 @@ layout: home
 title: Fadi T. Elhersh
 ---
 
-<header class="home-header">
-  <h1>{{ page.title }}</h1>
-  
-  <p class="subtitle">
-    **Computer Science Instructor** @ Yanbu Industrial College
-    <br>
-    SCM Optimization & **Machine Learning Researcher**
-  </p>
-</header>
-
-<hr>
-
 <h2>Recent Posts</h2>
 
 {% if site.posts.size > 0 -%}
@@ -33,5 +21,3 @@ title: Fadi T. Elhersh
 {% else -%}
 <p>No posts yet. Check back soon!</p>
 {% endif %}
-
-<p class="rss-link"><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></p>
