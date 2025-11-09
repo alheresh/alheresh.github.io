@@ -3,20 +3,29 @@ layout: home
 title: Fadi T. Elhersh
 ---
 
-<h1>
+<header class="home-header">
+  <h1>{{ page.title }}</h1>
+  
+  <p class="subtitle">
+    **Computer Science Instructor** @ Yanbu Industrial College
+    <br>
+    SCM Optimization & **Machine Learning Researcher**
+  </p>
+</header>
 
-<p>Computer Science Instructor @ Yanbu Industrial College</p>
-<p>SCM Optimization & Machine Learning Researcher</p>
-</h1>
+<hr>
+
 <h2>Recent Posts</h2>
 
 {% if site.posts.size > 0 -%}
 <ul class="post-list">
   {% for post in site.posts limit:10 -%}
     <li>
-      <strong>{{ post.date | date: '%d %b %Y' }}</strong> — <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="post-date">{{ post.date | date: '%d %b %Y' }}</span> — 
+      <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+      
       {% if post.excerpt and post.excerpt != empty -%}
-        <br><small class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</small>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
       {% endif %}
     </li>
   {% endfor -%}
@@ -25,4 +34,4 @@ title: Fadi T. Elhersh
 <p>No posts yet. Check back soon!</p>
 {% endif %}
 
-<p><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></p>
+<p class="rss-link"><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></p>
