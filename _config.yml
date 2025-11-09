@@ -11,6 +11,6 @@ plugins:
   # جيكل-فيد موقوف عمدًا عشان github-pages 232
 
 # إعدادات الثيم
-theme: jekyll-theme-cayman
+theme: minima
 title: Fadi T. Elhersh 
 description: Computer Science Instructor 
