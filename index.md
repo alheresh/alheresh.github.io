@@ -1,16 +1,16 @@
 ---
 layout: home
-title: فادي الهرش - موقع أكاديمي آلي
+title: فادي الهرش
 ---
-# أهلاً وسهلاً!
+<h1>أهلاً وسهلاً في موقعي الأكاديمي</h1>
+<p>باحث في <strong>Optimization & Machine Learning</strong><br>
+مجموعة OML – KAUST</p>
 
-أنا **فادي الهرش**  
-باحث في Optimization & Machine Learning  
-KAUST – OML Research Group  
-
-### آخر الأخبار والأوراق البحثية:
-{% for post in site.posts limit:5 %}
-- **{{ post.date | date: '%Y-%m-%d' }}** – [{{ post.title }}]({{ post.url }})
+<h2>آخر الأخبار والأوراق البحثية</h2>
+<ul>
+{% for post in site.posts limit:10 %}
+  <li><strong>{{ post.date | date: '%Y-%m-%d' }}</strong> – <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
+</ul>
 
-[جميع الأوراق البحثية]({{ '/feed.xml' | relative_url }})
+<p><a href=\"/feed.xml\">RSS Feed</a> (للنشر التلقائي على تويتر/لينكدإن)</p>
